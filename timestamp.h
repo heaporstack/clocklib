@@ -1,15 +1,15 @@
-#ifndef clocklib_timestamp
-#define clocklib_timestamp
+#ifndef CLOCKLIB_TIMESTAMP
+#define CLOCKLIB_TIMESTAMP
 
 #include "types.h"
 
 typedef struct
 {
-    u64 seconds;
+    large seconds;
 } Timestamp;
 
-Timestamp* create_timestamp(u64);
+Timestamp* create_timestamp(large);
 void delete_timestamp(Timestamp*);
-u8* stringify_timestamp(const Timestamp*);
+byte* stringify_timestamp(const Timestamp*);
 
 #endif

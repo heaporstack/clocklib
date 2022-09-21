@@ -1,22 +1,22 @@
-#ifndef clocklib_datetime
-#define clocklib_datetime
+#ifndef CLOCKLIB_DATETIME
+#define CLOCKLIB_DATETIME
 
 #include "types.h"
 #include "timestamp.h"
 
 typedef struct
 {
-    u64 year;
-    u8 month;
-    u8 day;
-    u8 hour;
-    u8 minute;
-    u8 second;
+    large year;
+    byte month;
+    byte day;
+    byte hour;
+    byte minute;
+    byte second;
 } Datetime;
 
-Datetime* create_datetime_with_utc(u64, i8);
+Datetime* create_datetime_with_utc(large, byte);
 #define create_datetime(seconds) create_datetime_with_utc(seconds, 0)
 void delete_datetime(Datetime*);
-u8* stringify_datetime(const Datetime*);
+byte* stringify_datetime(const Datetime*);
 
 #endif
